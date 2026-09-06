@@ -1,0 +1,363 @@
+{
+  "results": [
+    {
+      "persona": "(BOOK) Susan \u2014 home remodeling, no-volunteer",
+      "type": "happy-path",
+      "expect": "book",
+      "transport": "graph",
+      "build": "production",
+      "outcome": "book",
+      "pass": true,
+      "booked": true,
+      "booking": {
+        "fired": true,
+        "attempts": 1,
+        "booked": true,
+        "uid": "qeTqHuZ1EDzH8bxEdhPQ6H",
+        "status": "booked"
+      },
+      "ended": true,
+      "turns": 22,
+      "tools": [
+        "extract_intake_details",
+        "intake_completed",
+        "transition_to_Discovery",
+        "extract_discovery_details",
+        "discovery_completed",
+        "transition_to_Closer",
+        "extract_leak_inputs",
+        "calculate_monthly_leak",
+        "extract_closer_details",
+        "closer_completed",
+        "transition_to_Offer",
+        "extract_offer_details",
+        "offer_completed",
+        "transition_to_contact_details",
+        "extract_person_details",
+        "set_callback_number",
+        "record_reach_details",
+        "extract_contact_timezone",
+        "contact_details_completed",
+        "transition_to_ConfirmSlots",
+        "query_livecall_slots",
+        "extract_confirm_details",
+        "validate_lead",
+        "transition_to_VerifyLead",
+        "verify_lead_data",
+        "transition_to_Booking",
+        "create_livecall_booking",
+        "record_booking_uid",
+        "record_booking_outcome",
+        "transition_to_Closing",
+        "end_call"
+      ],
+      "final_state": "Closing",
+      "final_dvs": {
+        "first_name": "Susan",
+        "company_name": "Cornerstone Remodeling",
+        "industry": "home remodeling/contractor",
+        "callback_number": "+13039150001",
+        "prospect_timezone": "America/Denver",
+        "is_calling_best_number": false,
+        "pain_points": "calls go to voicemail when out on jobs, lost business if calls not answered, only sometimes staff available to answer, about 8 calls a week go to voicemail, half would book if answered",
+        "pain_frame": "about 8 calls a week go to voicemail, and half would book if answered",
+        "pain_urgency": "high",
+        "call_volume": "about 8 calls a week",
+        "interest_topic": "reducing lost opportunities from missed calls while out on jobs",
+        "inbound_channel": "flyer",
+        "interest_signal": true,
+        "pattern_matched": true,
+        "intake_completed": true,
+        "discovery_completed": true,
+        "closer_completed": true,
+        "offer_completed": true,
+        "contact_details_completed": true,
+        "phone_confirmed": true,
+        "slot_verified": true,
+        "data_verified": true,
+        "booking_completed": false,
+        "selected_time": "2026-09-04T13:00:00",
+        "slot_reservation_uids": "2c4b75b4-546f-46fc-bb36-b3a600eb4c65,a1f76ae0-6009-4887-90d4-41794a7e949d",
+        "today_date": "2026-09-04",
+        "missed_calls_weekly": 8,
+        "close_rate_pct": 50,
+        "avg_job_value": 2500,
+        "weekly_leak": "$10,000",
+        "monthly_leak": "$43,000",
+        "booking_uid": "qeTqHuZ1EDzH8bxEdhPQ6H",
+        "booking_verified": true,
+        "booking_failed": false,
+        "objection_type": "none",
+        "interest_level": "high",
+        "livecall_agreed": true,
+        "booking_confirmed": false
+      },
+      "gate_rejections": 1,
+      "blocked_transitions": 1,
+      "turn_ms": [
+        3807.3,
+        913.9,
+        2677.3,
+        1181.8,
+        1508.7,
+        1155.1,
+        977.7,
+        3791.2,
+        3082.1,
+        1145.1,
+        1599.2,
+        3134.5,
+        1466.9,
+        4332.3,
+        4938.2,
+        2280.0,
+        1640.7,
+        2140.2,
+        2844.0,
+        3833.7,
+        13585.3,
+        2918.2
+      ],
+      "p50_ms": 2677.3,
+      "wall_s": 81.0,
+      "cost": null,
+      "rag_stats": {
+        "rag_turns": 45,
+        "rag_ms_total": 11718.0,
+        "rag_chars": 21200
+      },
+      "call_id": "l2l-booksusan-7209cd69",
+      "transcript": [
+        {
+          "turn": 1,
+          "caller": "Hello \u2014 I got your flyer about after-hours calls. We miss calls when we're out on jobs.",
+          "agent": "Thanks for calling in! So you got our flyer about after-hours calls. What stood out to you on the flyer?",
+          "tools": [],
+          "state": "Intake",
+          "agent_ms": 3807.3
+        },
+        {
+          "turn": 2,
+          "caller": "We miss calls during jobs, and I'm interested in reducing lost opportunities.",
+          "agent": "Got it \u2014 you\u2019re interested in reducing lost opportunities from missed calls while you\u2019re out working. What\u2019s making this urgent for you right now?",
+          "tools": [],
+          "state": "Intake",
+          "agent_ms": 913.9
+        },
+        {
+          "turn": 3,
+          "caller": "About 8 calls a week go to voicemail, and half would book if answered.",
+          "agent": "That makes sense \u2014 missing out on those bookings can really add up. When a call goes unanswered, do folks usually leave a voicemail, or do they just move on?",
+          "tools": [
+            "extract_intake_details",
+            "intake_completed",
+            "transition_to_Discovery"
+          ],
+          "state": "Discovery",
+          "agent_ms": 2677.3
+        },
+        {
+          "turn": 4,
+          "caller": "They usually leave a voicemail, but sometimes they just move on without leaving a message.",
+          "agent": "Right, so some leave a voicemail, but others just disappear. When they don\u2019t leave a message, do you ever hear from them again, or is that business lost?",
+          "tools": [],
+          "state": "Discovery",
+          "agent_ms": 1181.8
+        },
+        {
+          "turn": 5,
+          "caller": "It's usually lost business if they don't leave a message or we don't answer right away.",
+          "agent": "I hear you \u2014 that\u2019s tough, knowing those calls could have been new jobs. What kind of work do you do, just so I understand your business better?",
+          "tools": [],
+          "state": "Discovery",
+          "agent_ms": 1508.7
+        },
+        {
+          "turn": 6,
+          "caller": "We're a home remodeling/contractor company, handling various projects around Denver.",
+          "agent": "Thanks for sharing that. For your home remodeling business, is it mostly you answering the phone, or do you have staff who help out?",
+          "tools": [],
+          "state": "Discovery",
+          "agent_ms": 1155.1
+        },
+        {
+          "turn": 7,
+          "caller": "Mostly me, but sometimes staff helps when they're available.",
+          "agent": "Got it. So when you\u2019re out on a job and can\u2019t answer, those calls just go to voicemail?",
+          "tools": [],
+          "state": "Discovery",
+          "agent_ms": 977.7
+        },
+        {
+          "turn": 8,
+          "caller": "Yes, that's right. They usually go to voicemail when we're out on a job and can't answer.",
+          "agent": "Thanks for explaining. So, just to be sure, you\u2019re looking for a way to stop losing those jobs when calls go to voicemail, right? Would you like to hear how we can help with that?",
+          "tools": [
+            "extract_discovery_details",
+            "discovery_completed",
+            "transition_to_Closer"
+          ],
+          "state": "Discovery",
+          "agent_ms": 3791.2
+        },
+        {
+          "turn": 9,
+          "caller": "Yes, I'm definitely interested in hearing how you can help us with that.",
+          "agent": "Great, thanks for confirming. And those 8 calls a week that hit voicemail \u2014 has anyone ever shown you the math on what that actually costs your business?",
+          "tools": [
+            "extract_discovery_details",
+            "discovery_completed",
+            "transition_to_Closer"
+          ],
+          "state": "Closer",
+          "agent_ms": 3082.1
+        },
+        {
+          "turn": 10,
+          "caller": "No, I haven't seen the math, but I know it affects potential bookings and revenue.",
+          "agent": "Makes sense. Mind if I do a quick calculation with your numbers? It\u2019ll take about 30 seconds.",
+          "tools": [],
+          "state": "Closer",
+          "agent_ms": 1145.1
+        },
+        {
+          "turn": 11,
+          "caller": "Sure, go ahead. I'm curious to see what the potential impact could be on our business.",
+          "agent": "Thanks! So, just to confirm \u2014 you said about 8 calls a week go to voicemail. And you think about half of those would book if answered, right? What\u2019s your average job value \u2014 is it around $400, $650, or something else?",
+          "tools": [],
+          "state": "Closer",
+          "agent_ms": 1599.2
+        },
+        {
+          "turn": 12,
+          "caller": "Yes, about half would book, and our average job value is around $2,500.",
+          "agent": "If you booked even half of those 8 missed calls, that's about $10,000 extra a week \u2014 does that sound about right to you?",
+          "tools": [
+            "extract_leak_inputs",
+            "calculate_monthly_leak"
+          ],
+          "state": "Closer",
+          "agent_ms": 3134.5
+        },
+        {
+          "turn": 13,
+          "caller": "Yes, that sounds about right. It would make a significant impact on our business.",
+          "agent": "Absolutely \u2014 and that's just one week. Over a month, that's about $43,300. What would it mean for your business to recover that kind of revenue?",
+          "tools": [],
+          "state": "Closer",
+          "agent_ms": 1466.9
+        },
+        {
+          "turn": 14,
+          "caller": "Recovering that revenue would significantly boost our business growth and stability. It's a crucial opportunity for us.",
+          "agent": "Cool. It's a 20-minute walkthrough \u2014 I'll show you exactly how it works and what your numbers look like with it on. What's better for you \u2014 later today or tomorrow?",
+          "tools": [
+            "extract_closer_details",
+            "closer_completed",
+            "transition_to_Offer"
+          ],
+          "state": "Offer",
+          "agent_ms": 4332.3
+        },
+        {
+          "turn": 15,
+          "caller": "Tomorrow would work best for me. Could you suggest a specific time for the walkthrough?",
+          "agent": "Great, I\u2019ll get that set up for tomorrow. Before I suggest a time, I just need to confirm a few details. What\u2019s your first name?",
+          "tools": [
+            "extract_offer_details",
+            "offer_completed",
+            "transition_to_contact_details"
+          ],
+          "state": "contact_details",
+          "agent_ms": 4938.2
+        },
+        {
+          "turn": 16,
+          "caller": "I'm Susan, the owner of Cornerstone Remodeling.",
+          "agent": "Thanks, Susan. And is the number you're calling from the best contact number to reach you for the walkthrough?",
+          "tools": [
+            "extract_person_details"
+          ],
+          "state": "contact_details",
+          "agent_ms": 2280.0
+        },
+        {
+          "turn": 17,
+          "caller": "No, the best contact number is +13039150001.",
+          "agent": "Thanks for that. Just to confirm, that's 1, 3, 0, 3, 9, 1, 5, 0, 0, 0, 1 \u2014 is that correct?",
+          "tools": [],
+          "state": "contact_details",
+          "agent_ms": 1640.7
+        },
+        {
+          "turn": 18,
+          "caller": "Yes, that's correct. The number is +13039150001.",
+          "agent": "Perfect. Quick check \u2014 you're on Mountain time, right?",
+          "tools": [
+            "set_callback_number",
+            "record_reach_details"
+          ],
+          "state": "contact_details",
+          "agent_ms": 2140.2
+        },
+        {
+          "turn": 19,
+          "caller": "Yes, that's correct. We're on Mountain time, America/Denver.",
+          "agent": "Great, thanks for confirming. So I have Susan with Cornerstone Remodeling, best number ending in 0, 0, 0, 1, and Mountain time. Is that all correct?",
+          "tools": [
+            "extract_contact_timezone"
+          ],
+          "state": "contact_details",
+          "agent_ms": 2844.0
+        },
+        {
+          "turn": 20,
+          "caller": "Yes, all correct. I'm ready to book the live call. Please suggest a specific day and time.",
+          "agent": "I can get you in as soon as 1:00 PM or 2:30 PM Mountain time tomorrow. Which works better for you?",
+          "tools": [
+            "contact_details_completed",
+            "transition_to_ConfirmSlots",
+            "query_livecall_slots"
+          ],
+          "state": "ConfirmSlots",
+          "agent_ms": 3833.7
+        },
+        {
+          "turn": 21,
+          "caller": "1:00 PM Mountain time tomorrow works for me. Yes, book it.",
+          "agent": "Alright, let me lock that in real quick. One moment while I confirm that for you. Thanks, Susan! Your walkthrough is set for tomorrow at 1:00 PM Mountain time. You\u2019ll get a confirmation with all the details and a link to join.\n\nIs there anything else I can help you with?",
+          "tools": [
+            "extract_confirm_details",
+            "validate_lead",
+            "transition_to_VerifyLead",
+            "verify_lead_data",
+            "transition_to_Booking",
+            "create_livecall_booking",
+            "record_booking_uid",
+            "record_booking_outcome",
+            "transition_to_Closing"
+          ],
+          "state": "Closing",
+          "agent_ms": 13585.3
+        },
+        {
+          "turn": 22,
+          "caller": "No, that's all. Thank you for setting it up. I'll look out for the confirmation.",
+          "agent": "Really glad you called, Susan. Jay's looking forward to meeting you tomorrow. Have a wonderful rest of your day! Goodbye!",
+          "tools": [
+            "end_call",
+            "end_call"
+          ],
+          "state": "Closing",
+          "agent_ms": 2918.2
+        }
+      ],
+      "log": "tests/llm2llm/json_logs/BOOKSusan_l2l-booksusan-7209cd69.json"
+    }
+  ],
+  "transport": "graph",
+  "build": "production",
+  "slots": "mock",
+  "caller_model": "gpt-4o",
+  "ts": "2026-09-05T09:05:26"
+}

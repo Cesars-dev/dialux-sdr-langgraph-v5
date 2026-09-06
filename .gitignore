@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+*.wav
+.pytest_cache/
+*.log
+.DS_Store
+slots.db*
